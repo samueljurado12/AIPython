@@ -21,6 +21,6 @@ Yo will need Python3, pip(package-manager for Python) and some libraries.
 ## Contributing
 This is not a personal project, but if I forget to update something, any help is welcomed.
 
-##Licensing
+## Licensing
 All the code from this repository is available and has been made by [Packt](https://github.com/PacktPublishing/Artificial-Intelligence-with-Python),
 I just try to keep it clean and safe from deprecated functions and stuff like that.
