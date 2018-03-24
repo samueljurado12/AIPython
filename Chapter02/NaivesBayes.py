@@ -43,5 +43,3 @@ print("Recall: " + str(round(100*recall_values.mean(), 2)) + "%")
 
 f1_values = cross_val_score(classifier, X, y, scoring='f1_weighted', cv=num_folds)
 print("F1: " + str(round(100*f1_values.mean(), 2)) + "%")
-
-# Page 61 Book
