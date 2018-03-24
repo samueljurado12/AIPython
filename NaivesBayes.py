@@ -1,8 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.naive_bayes import GaussianNB
-from sklearn import cross_validation
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, cross_val_score
 
 from utilities import visualize_classifier
 
@@ -34,16 +33,16 @@ visualize_classifier(classifier, X_test, y_test)
 
 num_folds = 3
 
-accuracy_values = cross_validation.cross_val_score(classifier, X, y, scoring='accuracy', cv=num_folds)
+accuracy_values = cross_val_score(classifier, X, y, scoring='accuracy', cv=num_folds)
 print("Accuracy: " + str(round(100*accuracy_values.mean(), 2)) + "%")
 
-precision_values = cross_validation.cross_val_score(classifier, X, y, scoring='precision_weighted', cv=num_folds)
+precision_values = cross_val_score(classifier, X, y, scoring='precision_weighted', cv=num_folds)
 print("Precision: " + str(round(100*precision_values.mean(), 2)) + "%")
 
-recall_values = cross_validation.cross_val_score(classifier, X, y, scoring='recall_weighted', cv=num_folds)
+recall_values = cross_val_score(classifier, X, y, scoring='recall_weighted', cv=num_folds)
 print("Recall: " + str(round(100*recall_values.mean(), 2)) + "%")
 
-f1_values = cross_validation.cross_val_score(classifier, X, y, scoring='f1_weighted', cv=num_folds)
+f1_values = cross_val_score(classifier, X, y, scoring='f1_weighted', cv=num_folds)
 print("F1: " + str(round(100*f1_values.mean(), 2)) + "%")
 
 # Page 61 Book
