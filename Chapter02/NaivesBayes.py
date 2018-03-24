@@ -1,9 +1,8 @@
 import numpy as np
-import matplotlib.pyplot as plt
 from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split, cross_val_score
 
-from utilities import visualize_classifier
+from Chapter02.utilities import visualize_classifier
 
 # Input file containing data
 input_file = 'data_multibar_nb.txt'

@@ -1,7 +1,7 @@
 import numpy as np
 from sklearn import linear_model
 
-from utilities import visualize_classifier
+from Chapter02.utilities import visualize_classifier
 
 # Define sample input data
 X = np.array([[3.1, 7.2], [4, 6.7], [2.9, 8], [5.1, 4.5], [6, 5], [5.6, 5],
